@@ -59,8 +59,8 @@ elif sidebar_option == 'Map':
     if map_option == 'Projects Map':
         st.write("Map of Projects")
         projects_map = folium.Map(location=[40.723072, -73.913267], zoom_start=12)
-      
-      for _, row in projects_df.iterrows():
+
+        for _, row in projects_df.iterrows():
             if pd.notna(row['Latitude']) and pd.notna(row['Longitude']):
                 folium.Marker(
                     location=[row['Latitude'], row['Longitude']],
